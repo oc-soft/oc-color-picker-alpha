@@ -19,7 +19,7 @@ class PhpGen {
       path.join(process.cwd(), 'src', 'control-type.txt'),
       { encoding: 'utf-8'})
     let contents = await fs.readFile(
-      path.join(process.cwd(), 'src', 'oc-color-picker-alpha.php'),
+      path.join(process.cwd(), 'src', 'php', 'oc-color-picker-alpha.php'),
       { encoding: 'utf-8'})
 
     controlType = controlType.trim()
@@ -28,7 +28,7 @@ class PhpGen {
     const outDir = path.join(process.cwd(), 'dist', 'php')
     await fs.mkdir(outDir, { recursive: true })
 
-    fs.writeFile(path.join(outDir, 'oc-color-picker-alpha.php'), contents)
+    await fs.writeFile(path.join(outDir, 'oc-color-picker-alpha.php'), contents)
   }
   
 }

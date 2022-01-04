@@ -4,7 +4,9 @@
   "description": "It extends Wordpress color picker customizer to be able to edit color alpha value.",
   "main": "dist/oc-color-picker-alpha.js",
   "scripts": {
-    "build-php": "node tools/php-gen.mjs",
+    "generate-php": "node tools/php-gen.mjs",
+    "copy-php": "node tools/php-copy.mjs",
+    "build-php": "npm run generate-php && npm run copy-php",
     "build-js": "rollup -c rollup.config.js",
     "build": "npm run build-js && npm run build-php",
     "test": "echo \"Error: no test specified\" && exit 1"

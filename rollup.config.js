@@ -2,7 +2,7 @@ import { string as rollupStr } from 'rollup-plugin-string'
 import alias from '@rollup/plugin-alias'
 
 const config = {
-  input: 'src/index.js',
+  input: 'src/js/index.js',
   external: ['wp'],
   output: {
     file: 'dist/js/oc-color-picker-alpha.js',
@@ -16,7 +16,7 @@ const config = {
       entries: [
         {
           find: /^(control-type)$/,
-          replacement: './$1.txt'
+          replacement: '../$1.txt'
         }
       ]
     }),
