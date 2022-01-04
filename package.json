@@ -1,0 +1,29 @@
+{
+  "name": "oc-color-picker-alpha",
+  "version": "0.1.0",
+  "description": "It extends Wordpress color picker customizer to be able to edit color alpha value.",
+  "main": "dist/oc-color-picker-alpha.js",
+  "scripts": {
+    "build-php": "node tools/php-gen.mjs",
+    "build-js": "rollup -c rollup.config.js",
+    "build": "npm run build-js && npm run build-php",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Wordpress",
+    "color",
+    "picker",
+    "color-picker",
+    "alpha",
+    "transparency",
+    "customizer"
+  ],
+  "author": "Toshiyuki Ogawa",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "ejs": "^3.1.6",
+    "rollup": "^2.63.0",
+    "rollup-plugin-string": "^3.0.0"
+  }
+}
