@@ -14,7 +14,7 @@ class OC_Color_Picker_Alpha_Ext {
     /**
      * register 
      */
-    function customiize_register($customize_mgr) {
+    function customize_register($customize_mgr) {
         $customize_mgr->register_control_type('OC_Color_Picker_Alpha');
     }
 
@@ -41,17 +41,17 @@ class OC_Color_Picker_Alpha_Ext {
             implode('/', [
                 $js_directory, 
                 'wp-color-picker-alpha.js']),
-            ['wp-color-picker', 'wp-color-ext']);
+            ['wp-color-picker', 'wp-iris-alpha']);
 
 
         wp_enqueue_script('wp-color-picker-alpha');
-        wp_register_script('oc-color-picker-alpha-ext',
+        wp_register_script('oc-color-picker-alpha',
             implode('/', [
                 $js_directory,
-                'oc-color-picker-alpha-ext.js'
+                'oc-color-picker-alpha.js'
             ]), 
             [ 'customize-controls' ]);
-        wp_enqueue_script('oc-color-picker-alpha-ext');
+        wp_enqueue_script('oc-color-picker-alpha');
     }
 }
 
