@@ -1,5 +1,5 @@
 {
-  "name": "oc-color-picker-alpha",
+  "name": "@oc-soft/color-picker-alpha",
   "version": "0.1.0",
   "description": "It extends Wordpress color picker customizer to be able to edit color alpha value.",
   "main": "dist/oc-color-picker-alpha.js",
